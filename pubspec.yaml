@@ -47,7 +47,10 @@ dependencies:
   firebase_auth: ^4.4.0
   firebase_database: ^10.1.0
   cloud_firestore: ^4.5.0
-
+  firebase_ui_auth: ^1.2.1
+  flutter_localizations:
+    sdk: flutter
+  firebase_ui_localizations: ^1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
