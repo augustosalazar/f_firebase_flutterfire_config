@@ -8,31 +8,12 @@ class FlutterFireLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Row(
-        children: [
-          //MyCustomSideBar(),
-          Padding(
-            padding: const EdgeInsets.all(16),
-            child: FirebaseUIActions(
-              actions: [
-                AuthStateChangeAction<SignedIn>((context, state) {
-                  if (!state.user!.emailVerified) {
-                    Navigator.pushNamed(context, '/verify-email');
-                  } else {
-                    Navigator.pushReplacementNamed(context, '/profile');
-                  }
-                }),
-              ],
-              child: LoginView(
-                action: AuthAction.signUp,
-                providers: FirebaseUIAuth.providersFor(
-                  FirebaseAuth.instance.app,
-                ),
-              ),
-            ),
-          )
-        ],
+        body: Center(
+            child: LoginView(
+      action: AuthAction.signUp,
+      providers: FirebaseUIAuth.providersFor(
+        FirebaseAuth.instance.app,
       ),
-    );
+    )));
   }
 }
