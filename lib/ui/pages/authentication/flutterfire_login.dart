@@ -8,12 +8,16 @@ class FlutterFireLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        backgroundColor: Colors.blueGrey,
         body: Center(
-            child: LoginView(
-      action: AuthAction.signUp,
-      providers: FirebaseUIAuth.providersFor(
-        FirebaseAuth.instance.app,
-      ),
-    )));
+            child: Padding(
+          padding: const EdgeInsets.fromLTRB(20.0, 0, 20.0, 0),
+          child: LoginView(
+            action: AuthAction.signIn,
+            providers: FirebaseUIAuth.providersFor(
+              FirebaseAuth.instance.app,
+            ),
+          ),
+        )));
   }
 }

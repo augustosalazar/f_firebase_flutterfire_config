@@ -1,3 +1,4 @@
+import 'package:firebase_ui_auth/firebase_ui_auth.dart';
 import 'package:get/get.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:loggy/loggy.dart';
@@ -44,7 +45,7 @@ class AuthenticationController extends GetxController {
   }
 
   String userEmail() {
-    String email = FirebaseAuth.instance.currentUser!.email ?? "a@a.com";
+    String email = FirebaseAuth.instance.currentUser!.email ?? "N/A";
     return email;
   }
 
